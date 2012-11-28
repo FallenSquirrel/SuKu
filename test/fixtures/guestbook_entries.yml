@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  town: MyString
+  message: MyText
+  refer_to: 1
+  posted_time: MyString
+  datetime: MyString
+
+two:
+  name: MyString
+  email: MyString
+  town: MyString
+  message: MyText
+  refer_to: 1
+  posted_time: MyString
+  datetime: MyString

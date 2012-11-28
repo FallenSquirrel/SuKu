@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @guestbook_entry.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @guestbook_entry.email %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%= @guestbook_entry.town %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @guestbook_entry.message %>
+</p>
+
+<p>
+  <b>Refer to:</b>
+  <%= @guestbook_entry.refer_to %>
+</p>
+
+<p>
+  <b>Posted time:</b>
+  <%= @guestbook_entry.posted_time %>
+</p>
+
+<p>
+  <b>Datetime:</b>
+  <%= @guestbook_entry.datetime %>
+</p>
+
+
+<%= link_to 'Edit', edit_guestbook_entry_path(@guestbook_entry) %> |
+<%= link_to 'Back', guestbook_entries_path %>

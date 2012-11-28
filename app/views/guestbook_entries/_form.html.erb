@@ -1,0 +1,45 @@
+<%= form_for(@guestbook_entry) do |f| %>
+  <% if @guestbook_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guestbook_entry.errors.count, "error") %> prohibited this guestbook_entry from being saved:</h2>
+
+      <ul>
+      <% @guestbook_entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br />
+    <%= f.text_field :town %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :refer_to %><br />
+    <%= f.number_field :refer_to %>
+  </div>
+  <div class="field">
+    <%= f.label :posted_time %><br />
+    <%= f.text_field :posted_time %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %><br />
+    <%= f.text_field :datetime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

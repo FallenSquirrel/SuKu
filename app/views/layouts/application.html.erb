@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SuKu</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="menu">
+	<% if session[:username] %>
+	<% else %>
+		<%= link_to "Events", list_events_path, :class => "menu_link" %>
+		
+		<%= link_to "Guestbook", guestbook_path, :class => "menu_link" %> 
+	<% end %>
+</div>
+
+<div class="content">
+<%= yield %>
+</div>
+
+<div class="footer"></div>
+</div>
+</body>
+</html>

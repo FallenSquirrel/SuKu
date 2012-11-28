@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  eventdate: 2012-11-14
+  doors: 2012-11-14 17:36:01
+  showstart: 2012-11-14 17:36:01
+  entryfee: MyString
+  description: MyText
+  sticky: false
+  published: false
+  galleryset_id: 1
+
+two:
+  name: MyString
+  eventdate: 2012-11-14
+  doors: 2012-11-14 17:36:01
+  showstart: 2012-11-14 17:36:01
+  entryfee: MyString
+  description: MyText
+  sticky: false
+  published: false
+  galleryset_id: 1
