@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+	var targetMenuLink = $(".highlight_menu_link").first().text();
+	$(".menu_link").each(function(i) {
+		if ($(this).attr("id") == targetMenuLink) {
+			//$(this).addClass("");
+			$(this).attr("class", "menu_link_page_active");
+		}
+	}
+	);
+}
+);

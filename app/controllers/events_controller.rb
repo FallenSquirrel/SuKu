@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.sort_by(&:eventdate).reverse
 
     respond_to do |format|
       format.html # index.html.erb

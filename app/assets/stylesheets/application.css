@@ -14,29 +14,30 @@
 
 body {
 	font-family: verdana, arial, helvetica, sans-serif;
-	font-size: 13px;
+	font-size: 10px;
 }
 
 .wrapper {
-	border-width: 1px;
-	border-style: solid;
+	padding: 2px;
+}
+
+.header {
+	height: 120px;
 }
 
 .menu {
+	padding: 8px 2px 2px 2px;
 	width: 200px;
 	float: left;
-	border-width: 1px;
-	border-style: solid;
 	text-align: right;
 }
 
 .content {
+	padding: 10px;
 	float: left;
-	border-width: 1px;
-	border-style: solid;
 }
 
-.footer {
+.float_clear {
 	clear: both;
 }
 
@@ -46,7 +47,7 @@ a.menu_link:link {
 	text-decoration: none;
 }
 a.menu_link:visited {
-	color: #0033cc;
+	color: #000000;
 	font-size: 24px;
 	text-decoration: none;
 }
@@ -59,4 +60,17 @@ a.menu_link:hover {
 	color: #cccc00;
 	font-size: 24px;
 	text-decoration: none;
+}
+a.menu_link_page_active {
+	color: #cccc00;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0px 0px 17px 0px;
+}
+
+div.highlight_menu_link {
+	display: none;
 }

@@ -1,4 +1,21 @@
-<h1>Listing events</h1>
+<% @events.each do |event| %>
+	<% if event.published %>
+		<% if (event.eventdate >= Date.current - EVENT_DAYS_PASSED_BEFORE_ARCHIVE) || (event.sticky) %>
+			<div class="event_wrapper">
+	    		<div class="event_headline">
+	    			<span class="event_title"><%= event.name %></span>
+	    			<span class="event_date"><%= event.eventdate.strftime("%d.%m.%y") %></span>
+	    			<div class="float_clear"></div>
+	    		</div>
+	    		<div class="event_text">
+	    			<%= event.description %>
+	    		</div>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>
+
+<br><br><br>
 
 <table>
   <tr>
@@ -17,20 +34,22 @@
   </tr>
 
 <% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.eventdate %></td>
-    <td><%= event.doors %></td>
-    <td><%= event.showstart %></td>
-    <td><%= event.entryfee %></td>
-    <td><%= event.description %></td>
-    <td><%= event.sticky %></td>
-    <td><%= event.published %></td>
-    <td><%= event.galleryset_id %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  <% if event.eventdate >= Date.current - EVENT_DAYS_PASSED_BEFORE_ARCHIVE %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.eventdate %></td>
+      <td><%= event.doors %></td>
+      <td><%= event.showstart %></td>
+      <td><%= event.entryfee %></td>
+      <td><%= event.description %></td>
+      <td><%= event.sticky %></td>
+      <td><%= event.published %></td>
+      <td><%= event.galleryset_id %></td>
+      <td><%= link_to 'Show', event %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
 <% end %>
 </table>
 
