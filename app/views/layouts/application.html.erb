@@ -19,9 +19,9 @@
 <div class="menu">
 	<% if session[:username] %>
 	<% else %>
-		<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %>
-		
-		<%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %> 
+		<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %><br />
+		<%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %><br />
+		<%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %><br />
 	<% end %>
 </div>
 

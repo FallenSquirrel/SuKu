@@ -10,6 +10,9 @@ SuKu::Application.routes.draw do
   get "Events" => "Events#index", as: "list_events" 
   resources :events
   
+  get "StaticPages" => "StaticPages#show"
+  resources :pages
+  
   root to: 'Events#index'
 
   # The priority is based upon order of creation:

@@ -34,6 +34,7 @@ body {
 
 .content {
 	padding: 10px;
+	width: 600px;
 	float: left;
 }
 
@@ -73,4 +74,27 @@ h1 {
 
 div.highlight_menu_link {
 	display: none;
+}
+
+.block_wrapper {
+  margin: 0px 0px 5px 0px;
+}
+
+.block_headline {
+  padding: 1px 3px 1px 3px;
+  background-color: #EFEFEF;
+}
+
+.block_title {
+  color: #640096;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+}
+
+.block_text {
+  margin: 3px 5px 20px 5px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
 }

@@ -1,13 +1,13 @@
 <% @events.each do |event| %>
 	<% if event.published %>
 		<% if (event.eventdate >= Date.current - EVENT_DAYS_PASSED_BEFORE_ARCHIVE) || (event.sticky) %>
-			<div class="event_wrapper">
-	    		<div class="event_headline">
-	    			<span class="event_title"><%= event.name %></span>
+			<div class="block_wrapper">
+	    		<div class="block_headline">
+	    			<span class="block_title"><%= event.name %></span>
 	    			<span class="event_date"><%= event.eventdate.strftime("%d.%m.%y") %></span>
 	    			<div class="float_clear"></div>
 	    		</div>
-	    		<div class="event_text">
+	    		<div class="block_text">
 	    			<%= event.description %>
 	    		</div>
 			</div>
