@@ -21,19 +21,24 @@
   </div>
   <div class="field">
     <%= f.label :doors %><br />
-    <%= f.time_select :doors %>
+    <%= f.time_select :doors, :default => {:hour => '20', :minute => '30'}%>
   </div>
   <div class="field">
     <%= f.label :showstart %><br />
-    <%= f.time_select :showstart %>
+    <%= f.time_select :showstart, :default => {:hour => '21', :minute => '00'}%>
   </div>
   <div class="field">
     <%= f.label :entryfee %><br />
-    <%= f.text_field :entryfee %>
+    <% if @event.new_record? %>
+    	<%= f.text_field :entryfee, :value => "4€"%>
+    <%else%>
+    	<%= f.text_field :entryfee %>
+    <%end%>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.tinymce :description %>
+    <!--<%= f.text_area :description %>-->
   </div>
   <div class="field">
     <%= f.label :sticky %><br />

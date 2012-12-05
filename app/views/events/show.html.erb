@@ -27,24 +27,16 @@
 
 <p>
   <b>Description:</b>
-  <%= @event.description %>
+  <%= @event.description.html_safe %>
 </p>
 
-<p>
-  <b>Sticky:</b>
-  <%= @event.sticky %>
-</p>
-
-<p>
-  <b>Published:</b>
-  <%= @event.published %>
-</p>
-
-<p>
-  <b>Galleryset:</b>
-  <%= @event.galleryset_id %>
-</p>
-
+<%if @event.galleryset_id%>
+	<p>
+  	<b>Gallery:</b>
+  	Link
+  	<%= @event.galleryset_id %>
+	</p>
+<%end%>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
