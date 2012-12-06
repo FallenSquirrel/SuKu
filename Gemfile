@@ -36,5 +36,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'libv8', '~> 3.11.8'
-gem 'therubyracer'
+#gem 'libv8', '~> 3.11.8'
+#gem 'therubyracer'
