@@ -98,3 +98,10 @@ div.highlight_menu_link {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 10px;
 }
+
+.block_date {
+  color: #FFAF00;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  float: right;
+}
