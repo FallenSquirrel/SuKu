@@ -8,16 +8,16 @@
   <%= init_tinymce_hammer_if_required %>
 </head>
 <body>
-<div class="wrapper">
+<div class="global_wrapper">
 	
-<div class="header">
+<div class="global_header">
 	<% flash.each do |name, msg| %>
     	<%= content_tag :div, msg, :id => "flash_#{name}" %>
 	<% end %>
 	
 </div>
 
-<div class="menu">
+<div class="global_menu">
 	<% if session[:username] %>
 	<% else %>
 		<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %><br />
@@ -26,11 +26,11 @@
 	<% end %>
 </div>
 
-<div class="content">
+<div class="global_content">
 <%= yield(:content) or yield %>
 </div>
 
-<div class="float_clear"></div>
+<%= clear_float %>
 </div>
 </body>
 </html>

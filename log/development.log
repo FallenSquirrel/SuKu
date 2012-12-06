@@ -19185,3 +19185,2198 @@ Served asset /static_pages.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 09:52:47 +0100
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 10:59:14 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (62.4ms)
+  Rendered layouts/application.html.erb (124.8ms)
+Completed 200 OK in 343ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /application.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /bands.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /members.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /events.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /events.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /members.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /static_pages.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:18 +0100
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (31.2ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:31 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:32 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 10:59:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (46.8ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:00:39 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (31.2ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:00:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (31.2ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /bands.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:01:57 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:02:09 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:10 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:30 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:02:31 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:04:20 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:20 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:04:21 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (93.6ms)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:49 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:05:55 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:05:56 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /events.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:47 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:48 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:48 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:48 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:48 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:07:48 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (46.8ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (78.0ms)
+Completed 200 OK in 140ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:49 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:09:50 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:10:28 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (15.6ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (15ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:28 +0100
+Served asset /application.css - 200 OK (46ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /static_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:10:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:11:21 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (15ms)  (pid 4796)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:21 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:21 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /bands.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:35 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:36 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:36 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:11:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:14:19 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:19 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:19 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:14:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:15:27 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:28 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:15:50 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:15:51 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:16:56 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (31.2ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:16:57 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:17:05 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:06 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:17:17 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:19:05 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:05 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:05 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:06 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:19:23 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:24 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:25 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /application.css - 200 OK (46ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:31 +0100
+Served asset /members.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:19:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4796)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /static_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Guestbook" for 127.0.0.1 at 2012-12-06 11:20:42 +0100
+Processing by GuestbookEntriesController#index as HTML
+  [1m[36mGuestbookEntry Load (0.0ms)[0m  [1mSELECT "guestbook_entries".* FROM "guestbook_entries" [0m
+  Rendered guestbook_entries/index.html.erb within layouts/guestbook_entries (0.0ms)
+  Rendered layouts/application.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:42 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:42 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:42 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:42 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:20:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2012-12-06 11:21:24 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:24 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:21:25 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 11:39:52 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (62.4ms)
+Compiled application.css  (0ms)  (pid 4892)
+  Rendered layouts/application.html.erb (156.0ms)
+Completed 200 OK in 359ms (Views: 343.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /static_pages.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:39:55 +0100
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (15ms)  (pid 4892)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:13 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:14 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:14 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:40:14 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+Compiled application.css  (0ms)  (pid 4892)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:41:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-06 11:42:51 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+Compiled application.css  (0ms)  (pid 4892)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:51 +0100
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:51 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:51 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:51 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-06 11:42:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)

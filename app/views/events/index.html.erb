@@ -1,15 +1,8 @@
 <% @events.each do |event| %>
 	<% if event.isUpToDate? %>
-		<div class="block_wrapper">
-    		<div class="block_headline">
-    			<span class="block_title"><%= event.name %></span>
-    			<span class="block_date"><%= event.eventdate.strftime("%d.%m.%y") %></span>
-    			<div class="float_clear"></div>
-    		</div>
-    		<div class="block_text">
-    			<%= event.description.html_safe %>
-    		</div>
-		</div>
+		<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
+    		<%= event.description.html_safe %>
+		<% end %>
 	<% end %>
 <% end %>
 

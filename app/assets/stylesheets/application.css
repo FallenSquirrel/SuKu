@@ -14,27 +14,27 @@
 
 body {
 	font-family: verdana, arial, helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 10pt;
 }
 
-.wrapper {
-	padding: 2px;
+.global_wrapper {
+	padding: 0.5em;
 }
 
-.header {
-	height: 120px;
+.global_header {
+	height: 10em;
 }
 
-.menu {
-	padding: 8px 2px 2px 2px;
-	width: 200px;
+.global_menu {
+	padding: 1em 0.5em 0.5em 0.5em;
+	width: 20%;
 	float: left;
 	text-align: right;
 }
 
-.content {
-	padding: 10px;
-	width: 600px;
+.global_content {
+	padding: 0.5em;
+	width: 70%;
 	float: left;
 }
 
@@ -44,64 +44,69 @@ body {
 
 a.menu_link:link {
 	color: #000000;
-	font-size: 24px;
+	font-size: 2em;
 	text-decoration: none;
 }
 a.menu_link:visited {
 	color: #000000;
-	font-size: 24px;
+	font-size: 2em;
 	text-decoration: none;
 }
 a.menu_link:active {
 	color: #000000;
-	font-size: 24px;
+	font-size: 2em;
 	text-decoration: none;
 }
 a.menu_link:hover {
 	color: #cccc00;
-	font-size: 24px;
+	font-size: 2em;
+	text-decoration: none;
+}
+a.menu_link:focus {
+	color: #cccc00;
+	font-size: 2em;
 	text-decoration: none;
 }
 a.menu_link_page_active {
 	color: #cccc00;
-	font-size: 24px;
+	font-size: 2em;
 	text-decoration: none;
 }
 
 h1 {
-	margin: 0px 0px 17px 0px;
+	margin: 0 0 1em 0;
 }
 
 div.highlight_menu_link {
 	display: none;
 }
 
-.block_wrapper {
-  margin: 0px 0px 5px 0px;
+.major_block_wrapper {
+  margin: 0 0 2em 0;
 }
 
-.block_headline {
-  padding: 1px 3px 1px 3px;
+.major_block_headline {
+  padding: 0.2em 0.5em 0.2em 0.5em;
   background-color: #EFEFEF;
 }
 
-.block_title {
+.major_block_title {
   color: #640096;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1.2em;
   font-weight: bold;
   float: left;
 }
 
-.block_text {
-  margin: 3px 5px 20px 5px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 10px;
+.major_block_date {
+  color: #FFAF00;
+  font-size: 1.2em;
+  float: right;
 }
 
-.block_date {
-  color: #FFAF00;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 14px;
-  float: right;
+.major_block_text {
+  padding: 0.5em;
+}
+
+p {
+	margin: 0 0 1em 0;
 }
