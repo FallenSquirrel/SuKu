@@ -1,16 +1,27 @@
 <%= highlight_menu_link "menu_link_about" %>
 
+<script>
+function ajax_load_subitem(url)
+{
+	$('#info_container').load(url);
+}
+</script>
+
 <%= major_block("Über uns") do %>
-	Testtext
+	<ul>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=what_is_suku');" class="submenu_link">Was ist der Subkultur e.V.?</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=opening');" class="submenu_link">&Ouml;ffnungszeiten</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=address');" class="submenu_link">Kontaktadresse</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=management');" class="submenu_link">Vorst&auml;nde und Beir&auml;te - Aufgabenverteilung</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=articles');" class="submenu_link">Vereinssatzung</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=join');" class="submenu_link">Mitglieder, warum und wie selbst Mitglied werden?</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=tech');" class="submenu_link">Technik-, Venue-Info</a></li>
+		<li><a href="javascript:ajax_load_subitem('/StaticPages?id=about&subid_ajax=disclaimer');" class="submenu_link">Disclaimer</a></li>
+	</ul>
 <% end %>
 
-<div class="block_wrapper">
-	<div class="block_headline">
-		<span class="block_title">Was ist der Subkultur e.V.?</span>
-		<div class="float_clear"></div>
-	</div>
-	<div class="block_text">
-		<p>Die Musikinitiative Subkultur e.V. ist ein eingetragener Verein, der sich seit mehreren Jahren für die Belange von Musikern und Musikinteressierten einsetzt. Es werden vom Verein auch andere Kultursparten unterstützt, wie Kleinkunst, Theater und Film. Subkultur e.V. ist dem Dachverband des Arbeitskreises Bayrischer Musikinitiativen (ABMI) angeschlossen.</p>
-		<p>Subkultur e.V. veranstaltet regelmäßig Konzertreihen im Alten Schlachthof in Fürstenfeldbruck. Neben Großveranstaltungen wie Open Air Konzerten werden auch CD-Produktionen von Subkultur e.V. ermöglicht, wobei den Musikgruppen aus der Region ein Forum geschaffen wird. Somit erfüllt Subkultur e.V. einen wichtigen Teil der Jugend- und Kulturarbeit im Raum Fürstenfeldbruck. </p>
-	</div>
+<div class="container" id="info_container">
+	<% if params[:subid] then %>
+		<%= render :partial => "static_pages/about_information_partials/#{params[:subid]}" %>
+	<% end %>
 </div>

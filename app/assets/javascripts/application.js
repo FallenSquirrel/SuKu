@@ -25,3 +25,8 @@ $(document).ready(function() {
 	);
 }
 );
+
+function newWindow(url)
+{
+	window.open(url, '_blank');
+}
