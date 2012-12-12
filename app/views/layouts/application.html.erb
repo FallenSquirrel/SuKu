@@ -11,11 +11,20 @@
 <div class="global_wrapper">
 	
 <div class="global_header">
-	<% flash.each do |name, msg| %>
-    	<%= content_tag :div, msg, :id => "flash_#{name}" %>
-	<% end %>
-	
+	<div class="header_logo">
+		<%= image_tag "logo.jpg" %>
+	</div>
+	<div class="header_text">
+		Subkultur e.V<br />
+		Auf der Lände 7<br />
+		82256 Fürstenfeldbruck<br />
+		<br />
+		Tel.: 08141 - 159 20<br />
+		E-Mail: info@subkultur-ffb.de
+	</div>
 </div>
+
+<%= clear_float %>
 
 <div class="global_menu">
 	<% if session[:username] %>
@@ -27,10 +36,27 @@
 </div>
 
 <div class="global_content">
-<%= yield(:content) or yield %>
+	<% flash.each do |name, msg| %>
+    	<%= content_tag :div, msg, :id => "flash_#{name}" %>
+	<% end %>
+	<%= yield(:content) or yield %>
 </div>
 
 <%= clear_float %>
+
+<div class="global_footer">
+	<%= image_tag "hr.gif" %>
+	<br />
+	&copy; 2013 subkultur e.V. &middot;
+	<%= link_to "home", "/" %>
+	&middot;
+	<%= link_to "contact", "/StaticPages?id=about&subid=address" %>
+	&middot;
+	<%= link_to "disclaimer", "/StaticPages?id=about&subid=disclaimer" %>
+	&middot;
+	login
+</div>
+
 </div>
 </body>
 </html>

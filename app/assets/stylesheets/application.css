@@ -21,8 +21,20 @@ body {
 	padding: 0.5em;
 }
 
+
 .global_header {
 	height: 10em;
+}
+
+.header_logo {
+	padding: 0 0 0 2em;
+	float: left;
+}
+
+.header_text {
+	padding: 0 2em 0 0;
+	float: right;
+	text-align: right;
 }
 
 .global_menu {
@@ -36,6 +48,12 @@ body {
 	padding: 0.5em;
 	width: 70%;
 	float: left;
+}
+
+.global_footer {
+	padding: 1em 0.5em 0.5em 0.5em;
+	width: 100%;
+	text-align: center;
 }
 
 .float_clear {
@@ -64,14 +82,11 @@ a.submenu_link:hover {
 	text-decoration: underline;
 }
 
-a.email {
+a {
 	color: #0000FF;
 	text-decoration: none;
 }
-a.email:hover {
-	text-decoration: underline;
-}
-a.email:focus {
+a:hover {
 	text-decoration: underline;
 }
 

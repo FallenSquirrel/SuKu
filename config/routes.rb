@@ -1,5 +1,7 @@
 SuKu::Application.routes.draw do
   
+  get "Users" => "Users#index"
+
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
   resources :guestbook_entries
 
