@@ -5,3 +5,6 @@ EVENT_DAYS_PASSED_BEFORE_ARCHIVE = 14
 
 # Number of guestbook entries displayed on one page
 GUESTBOOK_ENTRIES_PER_PAGE = 10
+
+# Number of guestbook entries displayed on one page
+EVENTS_PER_ARCHIVE_PAGE = 10
