@@ -2,7 +2,24 @@ class GuestbookEntriesController < ApplicationController
   # GET /guestbook_entries
   # GET /guestbook_entries.json
   def index
-    @guestbook_entries = GuestbookEntry.all
+    if params[:page]
+      @page = params[:page].to_i
+    else
+      @page = 0
+    end
+    
+    all_guestbook_entries = GuestbookEntry.all
+    @guestbook_entries = []
+    
+    @number_of_guestbook_entries = all_guestbook_entries.length
+    @number_of_pages = @number_of_guestbook_entries/GUESTBOOK_ENTRIES_PER_PAGE
+    
+    
+    0.upto(GUESTBOOK_ENTRIES_PER_PAGE - 1) do |i|
+      if all_guestbook_entries[i + @page * GUESTBOOK_ENTRIES_PER_PAGE]
+        @guestbook_entries << all_guestbook_entries[i + @page * GUESTBOOK_ENTRIES_PER_PAGE]
+      end
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +61,7 @@ class GuestbookEntriesController < ApplicationController
 
     respond_to do |format|
       if @guestbook_entry.save
-        format.html { redirect_to @guestbook_entry, notice: 'Guestbook entry was successfully created.' }
+        format.html { redirect_to guestbook_path, notice: 'Guestbook entry was successfully created.' }
         format.json { render json: @guestbook_entry, status: :created, location: @guestbook_entry }
       else
         format.html { render action: "new" }

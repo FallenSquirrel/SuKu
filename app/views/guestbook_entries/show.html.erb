@@ -25,16 +25,6 @@
   <%= @guestbook_entry.refer_to %>
 </p>
 
-<p>
-  <b>Posted time:</b>
-  <%= @guestbook_entry.posted_time %>
-</p>
-
-<p>
-  <b>Datetime:</b>
-  <%= @guestbook_entry.datetime %>
-</p>
-
 
 <%= link_to 'Edit', edit_guestbook_entry_path(@guestbook_entry) %> |
 <%= link_to 'Back', guestbook_entries_path %>

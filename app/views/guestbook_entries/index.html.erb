@@ -1,3 +1,47 @@
+<div class="multipage_select_line">
+	<%= "#{@number_of_guestbook_entries} Einträge auf #{@number_of_pages + 1} Seiten : « | " %>
+	<% 0.upto(@number_of_pages) do |i| %>
+		<% if i == @page %>
+			<span class="multipage_select_current_page"><%= "#{i + 1}" %></span>
+		<% else %> 
+			<%= link_to (i+1), "/Guestbook/#{i}" %>
+		<% end %>
+	<% end %>
+	<%= " | »" %>
+</div>
+<br />
+
+<%= link_to 'Eintragen', new_guestbook_entry_path %>
+<br />
+<br />
+
+<% @guestbook_entries.each do |guestbook_entry| %>
+	<% if guestbook_entry.town %>
+		<% title = "#{guestbook_entry.name} aus #{guestbook_entry.town} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
+	<% else %>
+		<% title = "#{guestbook_entry.name} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
+	<% end %>
+	<% if guestbook_entry.email %>
+		<% mail = link_to "email", "mailto:#{guestbook_entry.email}" %>
+	<% end %>
+	
+	<%= major_block(title, mail) do %>
+		<%= guestbook_entry.message.html_safe %>
+	<% end %>
+<% end %>
+
+<div class="multipage_select_line">
+	<%= "#{@number_of_guestbook_entries} Einträge auf #{@number_of_pages + 1} Seiten : « | " %>
+	<% 0.upto(@number_of_pages) do |i| %>
+		<% if i == @page %>
+			<span class="multipage_select_current_page"><%= "#{i + 1}" %></span>
+		<% else %> 
+			<%= link_to (i+1), "/Guestbook/#{i}" %>
+		<% end %>
+	<% end %>
+	<%= " | »" %>
+</div>
+
 <h1>Listing guestbook_entries</h1>
 
 <table>
@@ -7,8 +51,6 @@
     <th>Town</th>
     <th>Message</th>
     <th>Refer to</th>
-    <th>Posted time</th>
-    <th>Datetime</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,8 +63,6 @@
     <td><%= guestbook_entry.town %></td>
     <td><%= guestbook_entry.message %></td>
     <td><%= guestbook_entry.refer_to %></td>
-    <td><%= guestbook_entry.posted_time %></td>
-    <td><%= guestbook_entry.datetime %></td>
     <td><%= link_to 'Show', guestbook_entry %></td>
     <td><%= link_to 'Edit', edit_guestbook_entry_path(guestbook_entry) %></td>
     <td><%= link_to 'Destroy', guestbook_entry, confirm: 'Are you sure?', method: :delete %></td>

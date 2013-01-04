@@ -3,6 +3,7 @@ SuKu::Application.routes.draw do
   get "Users" => "Users#index"
 
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
+  get "Guestbook/:page" => "Guestbook_entries#index"
   resources :guestbook_entries
 
   resources :members
@@ -11,7 +12,7 @@ SuKu::Application.routes.draw do
 
   get "Events" => "Events#index", as: "list_events" 
   get "Archive" => "Events#archive", as: "archive"
-  get "Archive/:page" => "Events#archive", as: "archive"
+  get "Archive/:page" => "Events#archive"
   resources :events
   
   get "StaticPages" => "StaticPages#show"

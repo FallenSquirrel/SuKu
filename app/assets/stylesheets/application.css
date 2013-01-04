@@ -24,6 +24,9 @@ body {
 
 .global_header {
 	height: 10em;
+	padding: 1em;
+	text-align: center;
+	border-bottom: thick solid #EFEFEF;
 }
 
 .header_logo {

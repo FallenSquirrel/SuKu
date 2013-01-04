@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114164740) do
+ActiveRecord::Schema.define(:version => 20130104155700) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
@@ -63,10 +63,8 @@ ActiveRecord::Schema.define(:version => 20121114164740) do
     t.string   "town"
     t.text     "message"
     t.integer  "refer_to"
-    t.string   "posted_time"
-    t.string   "datetime"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "members", :force => true do |t|
