@@ -135,6 +135,15 @@ div.highlight_menu_link {
   padding: 0.5em 0.5em 0.5em 1em;
 }
 
+.multipage_select_line {
+	font-size: 1em;
+	text-align: center;
+}
+
+.multipage_select_current_page {
+	font-weight: bold;
+}
+
 .container {
 	margin: 0;
 	padding: 0;

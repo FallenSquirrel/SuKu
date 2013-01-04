@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<th>Title</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	
+<% @gallery_set.each do |gallery_set| %>
+	<tr>
+		<td><%= gallery_set.title %></td>
+		<td><%= link_to 'Show', gallery_set %></td>
+		<td><%= link_to 'Edit', edit_band_path(gallery_set) %></td>
+		<td><%= link_to 'Destroy', gallery_set, confirm: 'Are you sure?', method: :delete %></td>
+	</tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gallery', new_gallery_set_path %>

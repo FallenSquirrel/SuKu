@@ -1,8 +1,8 @@
+<%= highlight_menu_link "menu_link_events" %>
+
 <% @events.each do |event| %>
-	<% if event.isUpToDate? %>
-		<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
-    		<%= event.description.html_safe %>
-		<% end %>
+	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
+		<%= event.description.html_safe %>
 	<% end %>
 <% end %>
 
@@ -25,7 +25,6 @@
   </tr>
 
 <% @events.each do |event| %>
-  <% if event.eventdate >= Date.current - EVENT_DAYS_PASSED_BEFORE_ARCHIVE %>
     <tr>
       <td><%= event.name %></td>
       <td><%= event.eventdate %></td>
@@ -40,7 +39,6 @@
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
     </tr>
-  <% end %>
 <% end %>
 </table>
 

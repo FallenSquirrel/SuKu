@@ -29,9 +29,12 @@
 <div class="global_menu">
 	<% if session[:username] %>
 	<% else %>
-		<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %><br />
-		<%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %><br />
-		<%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %><br />
+		<ul>
+			<li><%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %></li>
+			<li><%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %></li>
+			<li><%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %></li>
+			<li><%= link_to "Archiv", "/Archive", :class => "menu_link", :id => "menu_link_archive" %></li>
+		</ul>
 	<% end %>
 </div>
 

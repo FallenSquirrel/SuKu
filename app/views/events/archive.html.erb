@@ -1,0 +1,20 @@
+<%= highlight_menu_link "menu_link_archive" %>
+
+<div class="multipage_select_line">
+	<%= "#{@number_of_archive_events} Einträge auf #{@number_of_pages + 1} Seiten : « | " %>
+	<% 0.upto(@number_of_pages) do |i| %>
+		<% if i == @page %>
+			<span class="multipage_select_current_page"><%= "#{i + 1}" %></span>
+		<% else %> 
+			<%= link_to (i+1), "/Archive/#{i}" %>
+		<% end %>
+	<% end %>
+	<%= " | »" %>
+</div>
+<br />
+
+<% @events.each do |event| %>
+	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
+		<%= event.description.html_safe %>
+	<% end %>
+<% end %>

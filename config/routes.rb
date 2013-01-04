@@ -10,6 +10,8 @@ SuKu::Application.routes.draw do
   resources :bands
 
   get "Events" => "Events#index", as: "list_events" 
+  get "Archive" => "Events#archive", as: "archive"
+  get "Archive/:page" => "Events#archive", as: "archive"
   resources :events
   
   get "StaticPages" => "StaticPages#show"

@@ -3,7 +3,50 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all.sort_by(&:eventdate).reverse
+    
+    #make list of new events
+#    all_events = Event.all.sort_by(&:eventdate).reverse
+#    @events = []
+#    all_events.each do |event|
+#      if event.isUpToDate?
+#        @events << event
+#      end
+#    end
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
+  end
+  
+  def archive
+    if params[:page]
+      @page = params[:page].to_i
+    else
+      @page = 0
+    end
+    
+    #make list of old events
+    all_events = Event.all.sort_by(&:eventdate).reverse
+    old_events = []
+    all_events.each do |event|
+      if event.isOld?
+        old_events << event
+      end
+    end
+    
+    @number_of_archive_events = old_events.length
+    @number_of_pages = @number_of_archive_events/EVENTS_PER_ARCHIVE_PAGE
+    
+    @events = []
+    0.upto(EVENTS_PER_ARCHIVE_PAGE - 1) do |i|
+      if old_events[i + @page * EVENTS_PER_ARCHIVE_PAGE]
+        @events << old_events[i + @page * EVENTS_PER_ARCHIVE_PAGE]
+      end
+    end
+    
+    @page = @page
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }

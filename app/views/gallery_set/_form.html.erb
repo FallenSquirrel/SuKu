@@ -1,0 +1,28 @@
+<%= form_for(@gallery_set) do |f| %>
+	<% if @gallery_set.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@gallery_set.errors.count, "error") %> prohibited this band from being saved:</h2>
+			<ul>
+				<% @gallery_set.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div class="field">
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :description %><br />
+		<%= f.text_field :description %>
+	</div>
+	<div class="field">
+		<%= f.label :year %><br />
+		<%= f.text_field :year %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
