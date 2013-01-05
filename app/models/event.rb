@@ -13,7 +13,7 @@ class Event < ActiveRecord::Base
   # If this event will be displayed in the archive
   def isOld?
     if published then
-      return !visibleOnFrontPage?
+      return !isUpToDate?
     end
     return false
   end

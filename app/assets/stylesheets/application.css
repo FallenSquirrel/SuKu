@@ -25,6 +25,9 @@ body {
 
 .global_header {
 	height: 10em;
+	padding: 1em;
+	text-align: center;
+	border-bottom: thick solid #EFEFEF;
 }
 
 .header_logo {
@@ -134,6 +137,15 @@ div.highlight_menu_link {
 
 .major_block_text {
   padding: 0.5em 0.5em 0.5em 1em;
+}
+
+.multipage_select_line {
+	font-size: 1em;
+	text-align: center;
+}
+
+.multipage_select_current_page {
+	font-weight: bold;
 }
 
 .container {

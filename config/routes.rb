@@ -2,11 +2,15 @@ SuKu::Application.routes.draw do
   
   get "Users" => "users#index"
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
+<<<<<<< HEAD
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
+=======
+  get "Guestbook/:page" => "Guestbook_entries#index"
+>>>>>>> e4e4e994882f88ab56d96a68797c4244224f97cd
   resources :guestbook_entries
   get "Members" => "members#index", as: "list_members"
   resources :members
@@ -14,6 +18,8 @@ SuKu::Application.routes.draw do
   resources :bands
  
   get "Events" => "Events#index", as: "list_events" 
+  get "Archive" => "Events#archive", as: "archive"
+  get "Archive/:page" => "Events#archive"
   resources :events
   
   get "StaticPages" => "StaticPages#show"

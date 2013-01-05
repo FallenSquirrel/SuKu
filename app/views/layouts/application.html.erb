@@ -39,6 +39,15 @@
 	<% if session[:user_id] %>
 		<%= link_to "Members", list_members_path, :class => "menu_link", :id => "menu_link_members" %><br />
 	<% else %>
+<<<<<<< HEAD
+=======
+		<ul>
+			<li><%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %></li>
+			<li><%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %></li>
+			<li><%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %></li>
+			<li><%= link_to "Archiv", archive_path, :class => "menu_link", :id => "menu_link_archive" %></li>
+		</ul>
+>>>>>>> e4e4e994882f88ab56d96a68797c4244224f97cd
 	<% end %>
 </div>
 
