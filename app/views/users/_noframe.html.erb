@@ -1,0 +1,38 @@
+<%= major_block("Vorstände und Beiräte - Aufgabenverteilung") do %>
+	<p>
+		<strong>Vorstände:</strong>
+		<p class="indent">	
+			<% @user.each do |user| %>
+				<% if user.title == "Vorstand" then %>
+					<strong>
+						<%= user.firstname %>
+						<%= user.lastname %>
+						(<a href="#{user.email}">email</a>)
+					</strong><br />
+					<% if user.job then %>
+						<%= user.job %>
+						<br />
+					<% end %>
+					<br />
+				<% end %>
+			<% end %>
+		</p>
+		<strong>Beiräte:</strong>
+		<p class="indent">
+			<% @user.each do |user| %>
+				<% if user.title == "Beirat" then %>
+					<strong>
+						<%= user.firstname %>
+						<%= user.lastname %>
+						(<a href="#{user.email}">email</a>)
+					</strong><br />
+					<% if user.job then %>
+						<%= user.job %>
+						<br />
+					<% end %>
+					<br />
+				<% end %>
+			<% end %>
+		</p>
+	</p>
+<% end %>

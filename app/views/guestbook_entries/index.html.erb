@@ -1,3 +1,12 @@
+<div class="headline">
+	Guestbook
+</div>
+
+<div class="function_links_line">
+	<%= link_to 'Eintragen', new_guestbook_entry_path %>
+</div>
+<br /><br />
+
 <div class="multipage_select_line">
 	<%= "#{@number_of_guestbook_entries} Einträge auf #{@number_of_pages + 1} Seiten : « | " %>
 	<% 0.upto(@number_of_pages) do |i| %>
@@ -11,10 +20,6 @@
 </div>
 <br />
 
-<%= link_to 'Eintragen', new_guestbook_entry_path %>
-<br />
-<br />
-
 <% @guestbook_entries.each do |guestbook_entry| %>
 	<% if guestbook_entry.town %>
 		<% title = "#{guestbook_entry.name} aus #{guestbook_entry.town} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
@@ -26,7 +31,14 @@
 	<% end %>
 	
 	<%= major_block(title, mail) do %>
-		<%= guestbook_entry.message.html_safe %>
+		<%= simple_format(guestbook_entry.message) %>
+		<% if session[:user_id] %>
+			<div class="function_links_line">
+				<%= link_to 'Bearbeiten', edit_guestbook_entry_path(guestbook_entry) %>
+				|
+				<%= link_to 'Löschen', guestbook_entry, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
 
@@ -42,6 +54,8 @@
 	<%= " | »" %>
 </div>
 
+
+<% if false %>
 <h1>Listing guestbook_entries</h1>
 
 <table>
@@ -73,3 +87,4 @@
 <br />
 
 <%= link_to 'New Guestbook entry', new_guestbook_entry_path %>
+<% end %>

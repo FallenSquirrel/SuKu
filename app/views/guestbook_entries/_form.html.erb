@@ -1,7 +1,7 @@
 <%= form_for(@guestbook_entry) do |f| %>
   <% if @guestbook_entry.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@guestbook_entry.errors.count, "error") %> prohibited this guestbook_entry from being saved:</h2>
+      <h2><%= pluralize(@guestbook_entry.errors.count, "error") %>:</h2>
 
       <ul>
       <% @guestbook_entry.errors.full_messages.each do |msg| %>
@@ -9,29 +9,32 @@
       <% end %>
       </ul>
     </div>
+    <br />
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label "Name:" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "Email: (optional)" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :town %><br />
+    <%= f.label "Stadt: (optional)" %><br />
     <%= f.text_field :town %>
   </div>
   <div class="field">
-    <%= f.label :message %><br />
-    <%= f.tinymce :message %>
+    <%= f.label "Nachricht:" %><br />
+    <%= f.text_area :message %>
   </div>
+  <% if false %>
   <div class="field">
     <%= f.label :refer_to %><br />
     <%= f.number_field :refer_to %>
   </div>
+  <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Eintragen" %>
   </div>
 <% end %>

@@ -1,7 +1,7 @@
 <%= form_for(@event) do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+      <h2><%= pluralize(@event.errors.count, "error") %>:</h2>
 
       <ul>
       <% @event.errors.full_messages.each do |msg| %>
@@ -9,26 +9,27 @@
       <% end %>
       </ul>
     </div>
+    <br />
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Name:" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :eventdate %><br />
+    <%= f.label :eventdate, "Datum:" %><br />
     <%= f.date_select :eventdate %>
   </div>
   <div class="field">
-    <%= f.label :doors %><br />
+    <%= f.label :doors, "Doors:" %><br />
     <%= f.time_select :doors, :default => {:hour => '20', :minute => '30'}%>
   </div>
   <div class="field">
-    <%= f.label :showstart %><br />
+    <%= f.label :showstart, "Showstart" %><br />
     <%= f.time_select :showstart, :default => {:hour => '21', :minute => '00'}%>
   </div>
   <div class="field">
-    <%= f.label :entryfee %><br />
+    <%= f.label :entryfee, "Eintrittspreis:" %><br />
     <% if @event.new_record? %>
     	<%= f.text_field :entryfee, :value => "4€"%>
     <%else%>
@@ -36,23 +37,25 @@
     <%end%>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description, "Beschreibung:" %><br />
     <%= f.tinymce :description %>
     <!--<%= f.text_area :description %>-->
   </div>
   <div class="field">
-    <%= f.label :sticky %><br />
+    <%= f.label :sticky, "Sticky (Nicht ins Archiv verschieben):" %><br />
     <%= f.check_box :sticky %>
   </div>
   <div class="field">
-    <%= f.label :published %><br />
-    <%= f.check_box :published %>
+    <%= f.label :published, "Published (Sichtbar für Gäste, kein Entwurf):" %><br />
+    <%= f.check_box :published, :checked => true %>
   </div>
+  <% if false %>
   <div class="field">
     <%= f.label :galleryset_id %><br />
     <%= f.number_field :galleryset_id %>
   </div>
+  <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Erstellen" %>
   </div>
 <% end %>

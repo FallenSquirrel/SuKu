@@ -1,11 +1,43 @@
 <%= highlight_menu_link "menu_link_events" %>
 
-<% @events.each do |event| %>
-	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
-		<%= event.description.html_safe %>
+<div class="headline">
+	Events
+</div>
+
+<% if session[:user_id] %>
+	<div class="function_links_line">
+		<%= link_to 'Neues Event hinzufügen', new_event_path %>
+	</div>
+	<br /><br />
+<% end %>
+
+<% if session[:user_id] %>
+	<% @unpublished_events.each do |event| %>
+		<%= major_block("(unpublished) #{event.name}", event.eventdate.strftime("%d.%m.%y")) do %>
+			<%= event.description.html_safe %>
+			<div class="function_links_line">
+				<%= link_to 'Bearbeiten', edit_event_path(event) %>
+				|
+				<%= link_to 'Löschen', event, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
 
+<% @events.each do |event| %>
+	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
+		<%= event.description.html_safe %>
+		<% if session[:user_id] %>
+			<div class="function_links_line">
+				<%= link_to 'Bearbeiten', edit_event_path(event) %>
+				|
+				<%= link_to 'Löschen', event, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>
+
+<% if false %>
 <br><br><br>
 
 <table>
@@ -45,3 +77,4 @@
 <br />
 
 <%= link_to 'New Event', new_event_path %>
+<% end %>

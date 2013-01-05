@@ -2,7 +2,7 @@
 	<p>
 		<strong>Vorstände:</strong>
 		<p class="indent">	
-			<% @users.each do |user| %>
+			<% @user.each do |user| %>
 				<% if user.title == "Vorstand" then %>
 					<strong>
 						<%= user.firstname %>
@@ -18,8 +18,8 @@
 			<% end %>
 		</p>
 		<strong>Beiräte:</strong>
-		<p class="indent">	
-			<% @users.each do |user| %>
+		<p class="indent">
+			<% @user.each do |user| %>
 				<% if user.title == "Beirat" then %>
 					<strong>
 						<%= user.firstname %>

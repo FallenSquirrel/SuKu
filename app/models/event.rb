@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+  validates_presence_of :name, :description
   
   # If this event will be displayed on the front page
   def isUpToDate?

@@ -18,4 +18,10 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+  
+  def noframe
+    @user = User.all
+    
+    render :partial => "noframe"
+  end
 end

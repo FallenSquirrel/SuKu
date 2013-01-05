@@ -1,3 +1,7 @@
+<div class="headline">
+	Eventarchiv
+</div>
+
 <%= highlight_menu_link "menu_link_archive" %>
 
 <div class="multipage_select_line">
@@ -16,6 +20,13 @@
 <% @events.each do |event| %>
 	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
 		<%= event.description.html_safe %>
+		<% if session[:user_id] %>
+			<div class="function_links_line">
+				<%= link_to 'Bearbeiten', edit_event_path(event) %>
+				|
+				<%= link_to 'Löschen', event, confirm: 'Are you sure?', method: :delete %>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
 

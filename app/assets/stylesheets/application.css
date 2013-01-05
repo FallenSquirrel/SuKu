@@ -103,6 +103,7 @@ h1 {
 	font-weight: bold;
 	margin: 0 0 1em 0;
 }
+
 h2 {
 	font-size: 100%;
 	font-weight: bold;
@@ -113,30 +114,45 @@ div.highlight_menu_link {
 	display: none;
 }
 
+.headline {
+	margin: 0 0 1em 0;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	color: #640096;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #EFEFEF;
+}
+
 .major_block_wrapper {
-  margin: 0 0 2em 0;
+	margin: 0 0 2em 0;
 }
 
 .major_block_headline {
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  background-color: #EFEFEF;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	background-color: #EFEFEF;
 }
 
 .major_block_title {
-  color: #640096;
-  font-size: 1.2em;
-  font-weight: bold;
-  float: left;
+	color: #640096;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
 }
 
 .major_block_date {
-  color: #FFAF00;
-  font-size: 1.2em;
-  float: right;
+	color: #FFAF00;
+	font-size: 1.2em;
+	float: right;
 }
 
 .major_block_text {
-  padding: 0.5em 0.5em 0.5em 1em;
+	padding: 0.5em 0.5em 0.5em 1em;
+}
+
+.function_links_line {
+	margin: 1em 0 0 0;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	background-color: #EFEFEF;
 }
 
 .multipage_select_line {

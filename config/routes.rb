@@ -1,6 +1,7 @@
 SuKu::Application.routes.draw do
   
   get "Users" => "users#index"
+  get "Users/noframe" => "users#noframe"
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
@@ -9,7 +10,7 @@ SuKu::Application.routes.draw do
   resources :sessions
   
   get "Guestbook/:page" => "Guestbook_entries#index"
-  resources :guestbook_entries
+  resources :guestbook_entries, :except => :show
   get "Members" => "members#index", as: "list_members"
   resources :members
 
@@ -18,7 +19,7 @@ SuKu::Application.routes.draw do
   get "Events" => "Events#index", as: "list_events" 
   get "Archive" => "Events#archive", as: "archive"
   get "Archive/:page" => "Events#archive"
-  resources :events
+  resources :events, :except => :show
   
   get "StaticPages" => "StaticPages#show"
   resources :pages

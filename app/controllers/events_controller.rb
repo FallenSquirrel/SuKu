@@ -2,16 +2,20 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all.sort_by(&:eventdate).reverse
-    
     #make list of new events
-#    all_events = Event.all.sort_by(&:eventdate).reverse
-#    @events = []
-#    all_events.each do |event|
-#      if event.isUpToDate?
-#        @events << event
-#      end
-#    end
+    all_events = Event.all.sort_by(&:eventdate).reverse
+    @events = []
+    all_events.each do |event|
+      if event.isUpToDate?
+        @events << event
+      end
+    end
+    @unpublished_events = []
+    all_events.each do |event|
+      if event.isUnpublished?
+        @unpublished_events << event
+      end
+    end    
 
     respond_to do |format|
       format.html # index.html.erb
