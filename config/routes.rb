@@ -1,14 +1,18 @@
 SuKu::Application.routes.draw do
   
-  get "Users" => "Users#index"
-
+  get "Users" => "users#index"
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  resources :users
+  resources :sessions
   resources :guestbook_entries
-
+  get "Members" => "members#index", as: "list_members"
   resources :members
 
   resources :bands
-
+ 
   get "Events" => "Events#index", as: "list_events" 
   resources :events
   

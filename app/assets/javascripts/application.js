@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.facebox
 
 $(document).ready(function() {
 	var targetMenuLink = $(".highlight_menu_link").first().text();
@@ -30,3 +31,14 @@ function newWindow(url)
 {
 	window.open(url, '_blank');
 }
+
+
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+  $(document).bind('reveal.facebox', function() {  
+        $('#new_session').submit(function() {  
+            $.post(this.action, $(this).serialize(), null, "script");  
+            return false;  
+        });  
+    });  
+})

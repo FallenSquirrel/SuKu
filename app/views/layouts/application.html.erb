@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>SuKu</title>
+  <%= stylesheet_link_tag 'facebox' %> 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'jquery' %>  
+  <%= javascript_include_tag 'facebox' %>
   <%= csrf_meta_tags %>
   <%= init_tinymce_hammer_if_required %>
 </head>
@@ -21,17 +24,21 @@
 		<br />
 		Tel.: 08141 - 159 20<br />
 		E-Mail: info@subkultur-ffb.de
+		<% if session[:user_id] %>
+			<br><%= link_to "logout", logout_path =%>
+		<%end%>
 	</div>
 </div>
 
 <%= clear_float %>
 
 <div class="global_menu">
-	<% if session[:username] %>
+	<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %><br />
+	<%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %><br />
+	<%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %><br />
+	<% if session[:user_id] %>
+		<%= link_to "Members", list_members_path, :class => "menu_link", :id => "menu_link_members" %><br />
 	<% else %>
-		<%= link_to "Events", list_events_path, :class => "menu_link", :id => "menu_link_events" %><br />
-		<%= link_to "About", "/StaticPages?id=about", :class => "menu_link", :id => "menu_link_about" %><br />
-		<%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %><br />
 	<% end %>
 </div>
 
@@ -53,8 +60,11 @@
 	<%= link_to "contact", "/StaticPages?id=about&subid=address" %>
 	&middot;
 	<%= link_to "disclaimer", "/StaticPages?id=about&subid=disclaimer" %>
-	&middot;
-	login
+	<% if session[:user_id] %>
+	<% else %>
+		&middot;
+		<%= link_to "login", login_path, :id => 'login-link', :rel => "facebox" %>
+	<% end %>
 </div>
 
 </div>
