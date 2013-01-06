@@ -1,6 +1,6 @@
 SuKu::Application.routes.draw do
   
-  get "Users" => "users#index"
+  get "Users" => "users#list_users", :as => "list_user"
   get "Users/noframe" => "users#noframe"
   get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
   get "logout" => "sessions#destroy", :as => "logout"

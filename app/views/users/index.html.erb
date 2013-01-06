@@ -7,7 +7,7 @@
 					<strong>
 						<%= user.firstname %>
 						<%= user.lastname %>
-						(<a href="#{user.email}">email</a>)
+						(<%=mail_to user.email, "email" %>)
 					</strong><br />
 					<% if user.job then %>
 						<%= user.job %>

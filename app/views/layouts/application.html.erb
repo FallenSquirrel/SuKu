@@ -26,6 +26,8 @@
 		E-Mail: info@subkultur-ffb.de
 		<% if session[:user_id] %>
 			<br><%= link_to "logout", logout_path =%>
+		<%else%>
+			<br><%= link_to "login", login_path, :id => 'login-link', :rel => "facebox" %>
 		<%end%>
 	</div>
 </div>
@@ -39,7 +41,9 @@
 		<li><%= link_to "Guestbook", guestbook_path, :class => "menu_link", :id => "menu_link_guestbook" %></li>
 		<li><%= link_to "Archiv", archive_path, :class => "menu_link", :id => "menu_link_archive" %></li>
 		<% if session[:user_id] %>
-			<li><%= link_to "Members", list_members_path, :class => "menu_link", :id => "menu_link_members" %></li>
+			<hr width=100 size="1" align="right">
+			<li><%= link_to "Mitglieder", list_members_path, :class => "menu_link", :id => "menu_link_members" %></li>
+			<li><%= link_to "User", list_user_path, :class => "menu_link", :id => "menu_link_members" %></li>
 		<% end %>
 	</ul>
 </div>
@@ -62,11 +66,6 @@
 	<%= link_to "contact", "/StaticPages?id=about&subid=address" %>
 	&middot;
 	<%= link_to "disclaimer", "/StaticPages?id=about&subid=disclaimer" %>
-	<% if session[:user_id] %>
-	<% else %>
-		&middot;
-		<%= link_to "login", login_path, :id => 'login-link', :rel => "facebox" %>
-	<% end %>
 </div>
 
 </div>
