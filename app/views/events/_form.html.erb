@@ -30,11 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :entryfee, "Eintrittspreis:" %><br />
-    <% if @event.new_record? %>
-    	<%= f.text_field :entryfee, :value => "4€"%>
-    <%else%>
-    	<%= f.text_field :entryfee %>
-    <%end%>
+    <%= f.text_field :entryfee %>
   </div>
   <div class="field">
     <%= f.label :description, "Beschreibung:" %><br />
@@ -47,7 +43,7 @@
   </div>
   <div class="field">
     <%= f.label :published, "Published (Sichtbar für Gäste, kein Entwurf):" %><br />
-    <%= f.check_box :published, :checked => true %>
+    <%= f.check_box :published %>
   </div>
   <% if false %>
   <div class="field">

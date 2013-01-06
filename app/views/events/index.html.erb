@@ -15,6 +15,10 @@
 	<% @unpublished_events.each do |event| %>
 		<%= major_block("(unpublished) #{event.name}", event.eventdate.strftime("%d.%m.%y")) do %>
 			<%= event.description.html_safe %>
+			<br /><br />
+			<span><%= "Doors: #{event.doors.strftime('%H:%M')}" %><br />
+			<%= "Beginn: #{event.showstart.strftime('%H:%M')}" %><br />
+			<%= "Eintritt: #{event.entryfee}, Mitglieder frei!" %></span>
 			<div class="function_links_line">
 				<%= link_to 'Bearbeiten', edit_event_path(event) %>
 				|
@@ -27,6 +31,10 @@
 <% @events.each do |event| %>
 	<%= major_block(event.name, event.eventdate.strftime("%d.%m.%y")) do %>
 		<%= event.description.html_safe %>
+		<br /><br />
+		<span><%= "Doors: #{event.doors.strftime('%H:%M')}" %><br />
+		<%= "Beginn: #{event.showstart.strftime('%H:%M')}" %><br />
+		<%= "Eintritt: #{event.entryfee}, Mitglieder frei!" %></span>
 		<% if session[:user_id] %>
 			<div class="function_links_line">
 				<%= link_to 'Bearbeiten', edit_event_path(event) %>

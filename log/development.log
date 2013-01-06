@@ -98404,3 +98404,3509 @@ Served asset /logo.jpg - 304 Not Modified (0ms)
 
 Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-05 21:18:57 +0100
 Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-06 13:05:29 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (46.8ms)
+Compiled facebox.css  (0ms)  (pid 5636)
+Compiled gallery_set.css  (46ms)  (pid 5636)
+Compiled sessions.css  (15ms)  (pid 5636)
+Compiled jquery.facebox.css  (0ms)  (pid 5636)
+Compiled application.css  (15ms)  (pid 5636)
+Compiled facebox.js  (0ms)  (pid 5636)
+Compiled gallery_set.js  (452ms)  (pid 5636)
+Compiled sessions.js  (249ms)  (pid 5636)
+Compiled jquery.facebox.js  (15ms)  (pid 5636)
+Compiled application.js  (31ms)  (pid 5636)
+  Rendered layouts/application.html.erb (1950.0ms)
+Completed 200 OK in 2278ms (Views: 2246.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /facebox.css - 200 OK (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /bands.css - 200 OK (31ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /application.css - 200 OK (46ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /members.css - 200 OK (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /events.css - 200 OK (15ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:32 +0100
+Served asset /gallery_set.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /scaffolds.css - 200 OK (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /guestbook_entries.css - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /static_pages.css - 200 OK (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /jquery.facebox.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /jquery.js - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /jquery_ujs.js - 200 OK (31ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /bands.js - 200 OK (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /events.js - 200 OK (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /facebox.js - 200 OK (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /gallery_set.js - 200 OK (15ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /guestbook_entries.js - 200 OK (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:33 +0100
+Served asset /members.js - 200 OK (15ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /users.js - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /jquery.facebox.js - 200 OK (46ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /logo.jpg - 200 OK (15ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /hr.gif - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox/loading.gif" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /facebox/loading.gif - 200 OK (15ms)
+
+
+Started GET "/assets/facebox/closelabel.png" for 127.0.0.1 at 2013-01-06 13:05:34 +0100
+Served asset /facebox/closelabel.png - 200 OK (31ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-06 13:05:44 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:06:46 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.de", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.de' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 218ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:06:51 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.de", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.de' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:06:57 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.de", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.de' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:07:08 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 156ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-06 13:07:40 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:07:49 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 156ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:07:54 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.com' LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 125ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:55 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:07:56 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-01-06 13:08:09 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (62.4ms)
+  Rendered events/new.html.erb within layouts/events (156.0ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 218ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:09 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:09 +0100
+Served asset /facebox.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:09 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:09 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:10 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 265ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:11 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2013-01-06 13:08:27 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:28 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:29 +0100
+Served asset /facebox.js - 304 Not Modified (15ms)
+
+
+Started GET "/events/2/edit" for 127.0.0.1 at 2013-01-06 13:08:37 +0100
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered events/_form.html.erb (31.2ms)
+  Rendered events/edit.html.erb within layouts/events (31.2ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:39 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:48 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:49 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:50 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:08:50 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-01-06 13:09:57 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (46.8ms)
+  Rendered events/new.html.erb within layouts/events (46.8ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 94ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:58 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:09:59 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (15.6ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (31.2ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:03 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:05 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events/2/edit" for 127.0.0.1 at 2013-01-06 13:10:06 +0100
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (15.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered events/_form.html.erb (62.4ms)
+  Rendered events/edit.html.erb within layouts/events (78.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 109ms (Views: 93.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:07 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:08 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (62.4ms)
+Completed 200 OK in 94ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:12 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:10:13 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:12:57 +0100
+
+SyntaxError (D:/Studium/Master/WS1213/Web Engineering/workspace/SuKu/app/controllers/events_controller.rb:73: invalid multibyte char (US-ASCII)
+D:/Studium/Master/WS1213/Web Engineering/workspace/SuKu/app/controllers/events_controller.rb:73: invalid multibyte char (US-ASCII)
+D:/Studium/Master/WS1213/Web Engineering/workspace/SuKu/app/controllers/events_controller.rb:73: syntax error, unexpected $end, expecting keyword_end
+    @event.entryfee = "4€"
+                          ^):
+  activesupport (3.2.1) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.1) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.1) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:62:in `controller_reference'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:47:in `controller'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.1) lib/action_dispatch/routing/route_set.rb:589:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.1) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `_run__220944884__call__800152679__callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.8ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-01-06 13:14:10 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (31.2ms)
+  Rendered events/new.html.erb within layouts/events (46.8ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 94ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:14:12 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (46.8ms)
+  Rendered events/new.html.erb within layouts/events (46.8ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:46 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /users.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:47 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:15:48 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (31.2ms)
+Completed 200 OK in 62ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:22 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:16:23 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:16:24 +0100
+Served asset /logo.jpg - 304 Not Modified (15ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:16:24 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (46.8ms)
+  Rendered events/new.html.erb within layouts/events (46.8ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/javascripts/tinymce_hammer.js" for 127.0.0.1 at 2013-01-06 13:17:12 +0100
+Processing by Tinymce::HammerController#combine as */*
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:17:12 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:17:12 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:17:12 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:20:54 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (31.2ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:21:18 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /facebox.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /bands.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:51 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:52 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:53 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:53 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:21:53 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:21:53 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:21:58 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (31.2ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:21:59 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:22:00 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:22:52 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /users.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:22:53 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:22:54 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:22:54 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Archive" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Processing by EventsController#archive as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/archive.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:01 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:02 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:03 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:03 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:23:03 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:23:03 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Guestbook" for 127.0.0.1 at 2013-01-06 13:23:09 +0100
+Processing by GuestbookEntriesController#index as HTML
+  [1m[35mGuestbookEntry Load (0.0ms)[0m  SELECT "guestbook_entries".* FROM "guestbook_entries" 
+  Rendered guestbook_entries/index.html.erb within layouts/guestbook_entries (218.4ms)
+  Rendered layouts/application.html.erb (31.2ms)
+Completed 200 OK in 296ms (Views: 280.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:09 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /gallery_set.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:10 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:23:11 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/guestbook_entries/new" for 127.0.0.1 at 2013-01-06 13:24:19 +0100
+Processing by GuestbookEntriesController#new as HTML
+  Rendered guestbook_entries/_form.html.erb (0.0ms)
+  Rendered guestbook_entries/new.html.erb within layouts/guestbook_entries (31.2ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 109ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:19 +0100
+Served asset /facebox.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:19 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:19 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /gallery_set.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:20 +0100
+Served asset /sessions.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:24:21 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (78.0ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /bands.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:40 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:24:41 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:24:42 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox/closelabel.png" for 127.0.0.1 at 2013-01-06 13:24:42 +0100
+Served asset /facebox/closelabel.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox/loading.gif" for 127.0.0.1 at 2013-01-06 13:24:42 +0100
+Served asset /facebox/loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-06 13:24:44 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-06 13:24:58 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcQZxNvAppqB3FQcfSM6GPw4k/uuY4ZZTgN5oBNISBU=", "email"=>"fabi@fakemail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'fabi@fakemail.com' LIMIT 1
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 203ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (15.6ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:07 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:09 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:09 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:25:09 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:25:09 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Members" for 127.0.0.1 at 2013-01-06 13:25:10 +0100
+Processing by MembersController#index as HTML
+  [1m[35mMember Load (0.0ms)[0m  SELECT "members".* FROM "members" 
+  Rendered members/index.html.erb within layouts/members (0.0ms)
+  Rendered layouts/application.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:11 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:25:12 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/StaticPages?id=about&subid=what_is_suku" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Processing by StaticPagesController#show as HTML
+  Parameters: {"id"=>"about", "subid"=>"what_is_suku"}
+  Rendered static_pages/about_information_partials/_what_is_suku.html.erb (0.0ms)
+  Rendered static_pages/_about.html.erb (15.6ms)
+  Rendered static_pages/show.html.erb within layouts/static_pages (46.8ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /static_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:25:36 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:25:37 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:25:38 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
+
+
+Started GET "/Users/noframe" for 127.0.0.1 at 2013-01-06 13:25:39 +0100
+Processing by UsersController#noframe as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/_noframe.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Members" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Processing by MembersController#index as HTML
+  [1m[35mMember Load (0.0ms)[0m  SELECT "members".* FROM "members" 
+  Rendered members/index.html.erb within layouts/members (0.0ms)
+  Rendered layouts/application.html.erb (46.8ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:07 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-06 13:26:08 +0100
+Served asset /hr.gif - 304 Not Modified (0ms)
