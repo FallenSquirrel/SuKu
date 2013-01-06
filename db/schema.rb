@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104155700) do
+ActiveRecord::Schema.define(:version => 20130106123545) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
@@ -68,32 +68,32 @@ ActiveRecord::Schema.define(:version => 20130104155700) do
   end
 
   create_table "members", :force => true do |t|
-    t.string   "lastname"
-    t.string   "firstname"
-    t.string   "address_street"
-    t.string   "address_zip"
-    t.string   "address_town"
-    t.string   "telephone"
-    t.string   "email"
-    t.date     "entrydate"
-    t.date     "birthday"
-    t.string   "bankaccount_nr"
-    t.string   "bankaccount_blz"
-    t.string   "bankaccount_bankname"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.string   "encrypted_bankaccount_nr"
+    t.string   "encrypted_lastname"
+    t.string   "encrypted_firstname"
+    t.string   "encrypted_address_street"
+    t.string   "encrypted_address_zip"
+    t.string   "encrypted_address_town"
+    t.string   "encrypted_telephone"
+    t.string   "encrypted_email"
+    t.date     "encrypted_entrydate"
+    t.date     "encrypted_birthday"
+    t.string   "encrypted_bankaccount_blz"
+    t.string   "encrypted_bankaccount_bankname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "lastname"
     t.string   "firstname"
     t.string   "title"
     t.string   "job"
     t.string   "usertyp"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
