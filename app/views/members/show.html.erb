@@ -1,65 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Lastname:</b>
-  <%= @member.lastname %>
-</p>
+<div class="headline">
+	<%= "Mitglied anzeigen" %> 
+</div>
 
-<p>
-  <b>Firstname:</b>
-  <%= @member.firstname %>
-</p>
+<%= major_block("Adresse") do %>
+	<strong>
+		<%= "#{@member.firstname} #{@member.lastname}" %>
+		<br />
+		<%= "#{@member.address_street}" %>
+		<br />
+		<%= "#{@member.address_zip} #{@member.address_town}" %>
+	</strong>
+<% end %>
 
-<p>
-  <b>Address street:</b>
-  <%= @member.address_street %>
-</p>
+<%= major_block("Telefonnummer") do %>
+	<strong>
+		<%= "#{@member.telephone}" %>
+	</strong>
+<% end %>
 
-<p>
-  <b>Address zip:</b>
-  <%= @member.address_zip %>
-</p>
+<%= major_block("E-Mail") do %>
+	<strong>
+		<%= link_to "#{@member.email}", "mailto:#{@member.email}" %>
+	</strong>
+<% end %>
 
-<p>
-  <b>Address town:</b>
-  <%= @member.address_town %>
-</p>
+<%= major_block("Eintrittsdatum") do %>
+	<strong>
+		<%= "#{@member.entrydate.strftime('%d.%m.%y')}" %>
+	</strong>
+<% end %>
 
-<p>
-  <b>Telephone:</b>
-  <%= @member.telephone %>
-</p>
+<%= major_block("Geburtstag") do %>
+	<strong>
+		<%= "#{@member.birthday.strftime('%d.%m.%y')}" %>
+	</strong>
+<% end %>
 
-<p>
-  <b>Email:</b>
-  <%= @member.email %>
-</p>
+<%= major_block("Kontoinformationen") do %>
+	<strong>Kontonummer: </strong>
+	<%= "#{@member.bankaccount_nr}" %>
+	<br />
+	<strong>Bankleitzahl: </strong>
+	<%= "#{@member.bankaccount_blz}" %>
+	<br />
+	<strong>Bankname: </strong>
+	<%= "#{@member.bankaccount_bankname}" %>
+<% end %>
 
-<p>
-  <b>Entrydate:</b>
-  <%= @member.entrydate %>
-</p>
-
-<p>
-  <b>Birthday:</b>
-  <%= @member.birthday %>
-</p>
-
-<p>
-  <b>Bankaccount nr:</b>
-  <%= @member.bankaccount_nr %>
-</p>
-
-<p>
-  <b>Bankaccount blz:</b>
-  <%= @member.bankaccount_blz %>
-</p>
-
-<p>
-  <b>Bankaccount bankname:</b>
-  <%= @member.bankaccount_bankname %>
-</p>
-
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<%= link_to 'Bearbeiten', edit_member_path(@member) %> |
+<%= link_to 'Löschen', @member, confirm: 'Sicher?', method: :delete %> |
+<%= link_to 'Zurück', members_path %>

@@ -1,45 +1,30 @@
-<h1>Listing members</h1>
+<div class="headline">
+	Mitglieder
+</div>
 
-<table>
-  <tr>
-    <th>Lastname</th>
-    <th>Firstname</th>
-    <th>Address street</th>
-    <th>Address zip</th>
-    <th>Address town</th>
-    <th>Telephone</th>
-    <th>Email</th>
-    <th>Entrydate</th>
-    <th>Birthday</th>
-    <th>Bankaccount nr</th>
-    <th>Bankaccount blz</th>
-    <th>Bankaccount bankname</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="function_links_line">
+	<%= link_to 'Hinzufügen', new_member_path %>
+</div>
+<br /><br />
 
-<% @members.each do |member| %>
-  <tr>
-    <td><%= member.lastname %></td>
-    <td><%= member.firstname %></td>
-    <td><%= member.address_street %></td>
-    <td><%= member.address_zip %></td>
-    <td><%= member.address_town %></td>
-    <td><%= member.telephone %></td>
-    <td><%= member.email %></td>
-    <td><%= member.entrydate %></td>
-    <td><%= member.birthday %></td>
-    <td><%= member.bankaccount_nr %></td>
-    <td><%= member.bankaccount_blz %></td>
-    <td><%= member.bankaccount_bankname %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+<div class="multipage_select_line">
+	<%= "« | " %>
+	<% "A".upto("Z") do |l| %>
+		<% if l == @letter %>
+			<span class="multipage_select_current_page"><%= "#{l}" %></span>
+		<% else %> 
+			<%= link_to l, "/Members/#{l}" %>
+		<% end %>
+	<% end %>
+	<% if @letter == "0" %>
+		<span class="multipage_select_current_page">#</span>
+	<% else %>
+		<%= link_to "#", "/Members/0" %>
+	<% end %>
+	<%= " | »" %>
+</div>
 <br />
 
-<%= link_to 'New Member', new_member_path %>
+<% @members.each do |member| %>
+  <%= link_to "#{member.lastname} #{member.firstname}", member %><br />
+<% end %>

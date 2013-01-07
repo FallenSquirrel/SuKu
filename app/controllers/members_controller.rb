@@ -4,7 +4,28 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    if params[:letter]
+      @letter = params[:letter]
+      if (@letter < "A" || @letter > "Z") && (@letter != "0")
+        @letter = "A"
+      end
+    else
+      @letter = "A"
+    end
+    members_all = Member.all.sort_by(&:lastname)
+    
+    @members = []
+    members_all.each do |member|
+      if @letter == "0"
+        if (member.lastname[0] < "A" || member.lastname[0] > "Z")
+          @members << member
+        end
+      else
+        if member.lastname[0] == @letter
+          @members << member
+        end
+      end
+    end 
 
     respond_to do |format|
       format.html # index.html.erb

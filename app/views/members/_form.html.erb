@@ -1,70 +1,51 @@
 <%= form_for(@member) do |f| %>
-  <% if @member.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+	<% if @member.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@member.errors.count, "error") %>:</h2>
 
-      <ul>
-      <% @member.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<table border="0" cellpadding="0" cellspacing="4">
-  <tr>
-  <div class="field">
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname %>
-  </div>
-  </tr>
-  <tr>
-  <div class="field">
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
-  </div>
-  </tr>
-  </table>
-  <div class="field">
-    <%= f.label :address_street %><br />
-    <%= f.text_field :address_street %>
-  </div>
-  <div class="field">
-    <%= f.label :address_zip %><br />
-    <%= f.text_field :address_zip %>
-  </div>
-  <div class="field">
-    <%= f.label :address_town %><br />
-    <%= f.text_field :address_town %>
-  </div>
-  <div class="field">
-    <%= f.label :telephone %><br />
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :entrydate %><br />
-    <%= f.date_select :entrydate %>
-  </div>
-  <div class="field">
-    <%= f.label :birthday %><br />
-    <%= f.date_select :birthday %>
-  </div>
-  <div class="field">
-    <%= f.label :bankaccount_nr %><br />
-    <%= f.text_field :bankaccount_nr %>
-  </div>
-  <div class="field">
-    <%= f.label :bankaccount_blz %><br />
-    <%= f.text_field :bankaccount_blz %>
-  </div>
-  <div class="field">
-    <%= f.label :bankaccount_bankname %><br />
-    <%= f.text_field :bankaccount_bankname %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+			<ul>
+				<% @member.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= major_block("Adresse") do %>
+		<%= f.label :firstname, "Vorname:" %><br />
+		<%= f.text_field :firstname %><br />
+		<%= f.label :lastname, "Nachname:" %><br />
+		<%= f.text_field :lastname %><br />
+		<%= f.label :address_street, "Straße:" %><br />
+		<%= f.text_field :address_street %><br />
+		<%= f.label :address_zip, "Postleitzahl:" %><br />
+		<%= f.text_field :address_zip %><br />
+		<%= f.label :address_town, "Ort:" %><br />
+		<%= f.text_field :address_town %>
+	<% end %>
+
+	<%= major_block("Telefonnummer") do %>
+		<%= f.text_field :telephone %>
+	<% end %>
+	
+	<%= major_block("E-Mail") do %>
+	    <%= f.text_field :email %>
+	<% end %>
+	
+	<%= major_block("Eintrittsdatum") do %>
+	    <%= f.date_select :entrydate %>
+	<% end %>
+	<%= major_block("Geburtstag") do %>
+	    <%= f.date_select :birthday %>
+	<% end %>
+	<%= major_block("Kontoinformationen") do %>
+	    <%= f.label :bankaccount_nr, "Kontonummer:" %><br />
+	    <%= f.text_field :bankaccount_nr %><br />
+	    <%= f.label :bankaccount_blz, "Bankleitzahl:" %><br />
+	    <%= f.text_field :bankaccount_blz %><br />
+	    <%= f.label :bankaccount_bankname, "Bankname:" %><br />
+	    <%= f.text_field :bankaccount_bankname %>
+	<% end %>
+<div class="actions">
+    <%= f.submit "Speichern" %>
+</div>
 <% end %>

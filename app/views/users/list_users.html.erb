@@ -1,27 +1,96 @@
-<h1>Benutzer</h1>
+<div class="headline">
+	Benutzer
+</div>
 
-<table>
-  <tr>
-    <th>Vorname</th>
-    <th>Nachname</th>
-    <th>Titel</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="function_links_line">
+	<%= link_to 'Neuer Benutzer', new_user_path %>
+</div>
+<br /><br />
 
-<% @user.each do |user| %>
-  <tr>
-    <td><%= user.lastname %></td>
-    <td><%= user.firstname %></td>
-    <td><%= user.title %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<%= major_block("Vorstände") do %>
+	<% @user.each do |user| %>
+		<% if user.title == "Vorstand" then %>
+			<strong>
+				<%= user.firstname %>
+				<%= user.lastname %>
+				(<%=mail_to user.email, "email" %>)
+			</strong>
+			<% if user.job then %>
+				<br />
+				<%= user.job %>
+			<% end %>
+			<div class="function_links_line">
+				<%= link_to "Anzeigen", user %> |
+				<%= link_to 'Bearbeiten', edit_user_path(user) %> |
+				<%= link_to 'Löschen', user, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+			<br /><br />
+		<% end %>
+	<% end %>
 <% end %>
-</table>
 
-<br />
+<%= major_block("Beiräte") do %>
+	<% @user.each do |user| %>
+		<% if user.title == "Beirat" then %>
+			<strong>
+				<%= user.firstname %>
+				<%= user.lastname %>
+				(<%=mail_to user.email, "email" %>)
+			</strong>
+			<% if user.job then %>
+				<br />
+				<%= user.job %>
+			<% end %>
+			<div class="function_links_line">
+				<%= link_to "Anzeigen", user %> |
+				<%= link_to 'Bearbeiten', edit_user_path(user) %> |
+				<%= link_to 'Löschen', user, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+			<br /><br />
+		<% end %>
+	<% end %>
+<% end %>
 
-<%= link_to 'Neuer Benutzer', new_user_path %>
+<%= major_block("Administratoren") do %>
+	<% @user.each do |user| %>
+		<% if user.title == "Administrator" then %>
+			<strong>
+				<%= user.firstname %>
+				<%= user.lastname %>
+				(<%=mail_to user.email, "email" %>)
+			</strong>
+			<% if user.job then %>
+				<br />
+				<%= user.job %>
+			<% end %>
+			<div class="function_links_line">
+				<%= link_to "Anzeigen", user %> |
+				<%= link_to 'Bearbeiten', edit_user_path(user) %> |
+				<%= link_to 'Löschen', user, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+			<br /><br />
+		<% end %>
+	<% end %>
+<% end %>
+
+<%= major_block("Fotografen") do %>
+	<% @user.each do |user| %>
+		<% if user.title == "Fotograf" then %>
+			<strong>
+				<%= user.firstname %>
+				<%= user.lastname %>
+				(<%=mail_to user.email, "email" %>)
+			</strong>
+			<% if user.job then %>
+				<br />
+				<%= user.job %>
+			<% end %>
+			<div class="function_links_line">
+				<%= link_to "Anzeigen", user %> |
+				<%= link_to 'Bearbeiten', edit_user_path(user) %>|
+				<%= link_to 'Löschen', user, confirm: 'Sind Sie sicher?', method: :delete %>
+			</div>
+			<br /><br />
+		<% end %>
+	<% end %>
+<% end %>

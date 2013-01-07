@@ -1,20 +1,23 @@
 SuKu::Application.routes.draw do
   
-  get "Users" => "users#list_users", :as => "list_user"
+  get "Users" => "users#index", :as => "list_user"
   get "Users/noframe" => "users#noframe"
-  get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   resources :users
+  
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
   resources :sessions
   
+  get "Guestbook" => "Guestbook_entries#index", as: "guestbook"
   get "Guestbook/:page" => "Guestbook_entries#index"
   resources :guestbook_entries, :except => :show
+  
   get "Members" => "members#index", as: "list_members"
+  get "Members/:letter" => "members#index"
   resources :members
 
-  resources :bands
+  #resources :bands
  
   get "Events" => "Events#index", as: "list_events" 
   get "Archive" => "Events#archive", as: "archive"
@@ -22,7 +25,7 @@ SuKu::Application.routes.draw do
   resources :events, :except => :show
   
   get "StaticPages" => "StaticPages#show"
-  resources :pages
+  #resources :pages
   
   root to: 'Events#index'
 

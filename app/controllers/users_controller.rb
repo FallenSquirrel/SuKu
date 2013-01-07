@@ -1,15 +1,10 @@
 class UsersController < ApplicationController
+  before_filter :login_required
   
   def index
     @user = User.all
     
     render "index"
-  end
-  
-  def list_users
-    @user = User.all
-    
-    render "list_users"
   end
 
   def new
@@ -33,7 +28,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to link_users_url, :notice => "Benutzer erstellt!"
+      redirect_to @user, :notice => "Benutzer erstellt!"
     else
       render "new"
     end

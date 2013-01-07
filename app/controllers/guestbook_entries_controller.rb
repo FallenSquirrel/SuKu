@@ -8,7 +8,7 @@ class GuestbookEntriesController < ApplicationController
       @page = 0
     end
     
-    all_guestbook_entries = GuestbookEntry.all
+    all_guestbook_entries = GuestbookEntry.all.sort_by(&:created_at).reverse
     @guestbook_entries = []
     
     @number_of_guestbook_entries = all_guestbook_entries.length
@@ -77,7 +77,7 @@ class GuestbookEntriesController < ApplicationController
 
     respond_to do |format|
       if @guestbook_entry.update_attributes(params[:guestbook_entry])
-        format.html { redirect_to @guestbook_entry, notice: 'Guestbook entry was successfully updated.' }
+        format.html { redirect_to guestbook_path, notice: 'Guestbook entry was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

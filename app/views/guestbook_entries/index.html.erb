@@ -21,10 +21,10 @@
 <br />
 
 <% @guestbook_entries.each do |guestbook_entry| %>
-	<% if guestbook_entry.town %>
-		<% title = "#{guestbook_entry.name} aus #{guestbook_entry.town} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
-	<% else %>
+	<% if guestbook_entry.town == "" %>
 		<% title = "#{guestbook_entry.name} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
+	<% else %>
+		<% title = "#{guestbook_entry.name} aus #{guestbook_entry.town} schrieb am #{guestbook_entry.created_at.strftime('%d.%m.%y')}:" %>
 	<% end %>
 	<% if guestbook_entry.email %>
 		<% mail = link_to "email", "mailto:#{guestbook_entry.email}" %>
