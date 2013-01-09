@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, :notice => "Logged in!"
     else
      flash[:error] = "Invalid email or password"
-      render :action => :new
+      redirect_to :back
     end
   end
 

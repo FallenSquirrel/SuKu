@@ -34,7 +34,7 @@ function newWindow(url)
 
 
 jQuery(document).ready(function($) {
-  $('a[rel*=facebox]').facebox()
+  $('#login-link').facebox()
   $(document).bind('reveal.facebox', function() {  
         $('#new_session').submit(function() {  
             $.post(this.action, $(this).serialize(), null, "script");  
