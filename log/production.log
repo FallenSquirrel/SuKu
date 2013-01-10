@@ -1,0 +1,12 @@
+Migrating to CreateGallerySets (20121114161048)
+Migrating to CreateGalleryPictures (20121114161127)
+Migrating to CreateEvents (20121114163600)
+Migrating to CreateBands (20121114164428)
+Migrating to CreateUsers (20121114164523)
+Migrating to CreateMembers (20121114164621)
+Migrating to CreateGuestbookEntries (20121114164740)
+Migrating to RemoveDatetimeFromGuestbookEntries (20130104155627)
+Migrating to RemovePostedTimeFromGuestbookEntries (20130104155700)
+Migrating to EncryptMembers (20130106123545)
+Migrating to RenameUserPasswordToPasswordDigest (20130110174753)
+Binary data inserted for `string` type on column `password_digest`

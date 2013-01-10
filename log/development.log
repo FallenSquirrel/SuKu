@@ -48377,3 +48377,1947 @@ Served asset /facebox/closelabel.png - 304 Not Modified (0ms)
 
 Started GET "/assets/facebox/loading.gif" for 127.0.0.1 at 2013-01-09 15:23:38 +0100
 Served asset /facebox/loading.gif - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGallerySets (20121114161048)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "gallery_sets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "year" integer, "event_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161048')
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGalleryPictures (20121114161127)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "gallery_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161127')
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20121114163600)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "eventdate" date, "doors" time, "showstart" time, "entryfee" varchar(255), "description" text, "sticky" boolean, "published" boolean, "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114163600')
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBands (20121114164428)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bandinfo" text, "email" varchar(255), "telephone" varchar(255), "homepage" varchar(255), "picture" varchar(255), "notices" varchar(255), "type" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164428')
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20121114164523)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164523')
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMembers (20121114164621)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164621')
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGuestbookEntries (20121114164740)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164740')
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveDatetimeFromGuestbookEntries (20130104155627)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "guestbook_entries"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_guestbook_entries"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130104155627')[0m
+  [1m[35m (15.0ms)[0m  commit transaction
+Migrating to RemovePostedTimeFromGuestbookEntries (20130104155700)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("guestbook_entries")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_guestbook_entries")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130104155700')
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+Migrating to EncryptMembers (20130106123545)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (1.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130106123545')[0m
+  [1m[35m (18.0ms)[0m  commit transaction
+Migrating to RenameUserPasswordToPasswordDigest (20130110174753)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "users"
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130110174753')
+  [1m[36m (38.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bands")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("gallery_pictures")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("gallery_sets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("members")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGallerySets (20121114161048)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "gallery_sets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "year" integer, "event_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161048')
+  [1m[36m (45.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGalleryPictures (20121114161127)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "gallery_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161127')
+  [1m[36m (28.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20121114163600)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "eventdate" date, "doors" time, "showstart" time, "entryfee" varchar(255), "description" text, "sticky" boolean, "published" boolean, "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114163600')
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBands (20121114164428)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bandinfo" text, "email" varchar(255), "telephone" varchar(255), "homepage" varchar(255), "picture" varchar(255), "notices" varchar(255), "type" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164428')
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20121114164523)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164523')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMembers (20121114164621)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164621')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGuestbookEntries (20121114164740)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164740')
+  [1m[36m (30.0ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveDatetimeFromGuestbookEntries (20130104155627)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_guestbook_entries"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130104155627')[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to RemovePostedTimeFromGuestbookEntries (20130104155700)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("guestbook_entries")[0m
+  [1m[35m (1.0ms)[0m  SELECT * FROM "guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_guestbook_entries")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_guestbook_entries"
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130104155700')
+  [1m[36m (39.0ms)[0m  [1mcommit transaction[0m
+Migrating to EncryptMembers (20130106123545)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (1.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130106123545')[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+Migrating to RenameUserPasswordToPasswordDigest (20130110174753)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130110174753')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bands")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("gallery_pictures")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("gallery_sets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("members")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (31.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "firstname", "job", "lastname", "password_digest", "title", "updated_at", "usertyp") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 10 Jan 2013 17:59:47 UTC +00:00], ["email", "admin"], ["firstname", "delete me"], ["job", "delete me"], ["lastname", "delete me"], ["password_digest", "$2a$10$RJs75/A9DHPKMUg5Jv/OQOcgplMUKh7MbYE/sA.cgi8K0FRS0LlFO"], ["title", "delete me"], ["updated_at", Thu, 10 Jan 2013 17:59:47 UTC +00:00], ["usertyp", "Administrator"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 19:00:20 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (16.0ms)
+Compiled application.css  (9ms)  (pid 5204)
+Compiled application.js  (5ms)  (pid 5204)
+  Rendered layouts/application.html.erb (424.0ms)
+Completed 200 OK in 515ms (Views: 514.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /facebox.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /bands.css - 200 OK (1ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /members.css - 200 OK (2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /events.css - 200 OK (11ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /gallery_set.css - 200 OK (1ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /guestbook_entries.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /sessions.css - 200 OK (1ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /static_pages.css - 200 OK (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /users.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /jquery.facebox.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /bands.js - 200 OK (2ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /events.js - 200 OK (1ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /facebox.js - 200 OK (1ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /guestbook_entries.js - 200 OK (3ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /gallery_set.js - 200 OK (2ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /members.js - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:21 +0100
+Served asset /static_pages.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /jquery.facebox.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /logo.jpg - 200 OK (2ms)
+
+
+Started GET "/assets/hr.gif" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /hr.gif - 200 OK (72ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox/loading.gif" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /facebox/loading.gif - 200 OK (16ms)
+
+
+Started GET "/assets/facebox/closelabel.png" for 127.0.0.1 at 2013-01-10 19:00:22 +0100
+Served asset /facebox/closelabel.png - 200 OK (1ms)
+
+
+Started GET "/StaticPages?id=about&subid=what_is_suku" for 127.0.0.1 at 2013-01-10 19:00:24 +0100
+Processing by StaticPagesController#show as HTML
+  Parameters: {"id"=>"about", "subid"=>"what_is_suku"}
+  Rendered static_pages/about_information_partials/_what_is_suku.html.erb (1.0ms)
+  Rendered static_pages/_about.html.erb (12.0ms)
+  Rendered static_pages/show.html.erb within layouts/static_pages (45.0ms)
+  Rendered layouts/application.html.erb (10.0ms)
+Completed 200 OK in 62ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /bands.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:25 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/StaticPages?id=about&subid_ajax=opening" for 127.0.0.1 at 2013-01-10 19:00:26 +0100
+Processing by StaticPagesController#show as HTML
+  Parameters: {"id"=>"about", "subid_ajax"=>"opening"}
+  Rendered static_pages/about_information_partials/_opening.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/StaticPages?id=about&subid_ajax=articles" for 127.0.0.1 at 2013-01-10 19:00:27 +0100
+Processing by StaticPagesController#show as HTML
+  Parameters: {"id"=>"about", "subid_ajax"=>"articles"}
+  Rendered static_pages/about_information_partials/_articles.html.erb (1.0ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Users/noframe" for 127.0.0.1 at 2013-01-10 19:00:27 +0100
+Processing by UsersController#noframe as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/_noframe.html.erb (1.0ms)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Guestbook" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Processing by GuestbookEntriesController#index as HTML
+  [1m[36mGuestbookEntry Load (1.0ms)[0m  [1mSELECT "guestbook_entries".* FROM "guestbook_entries" [0m
+  Rendered guestbook_entries/index.html.erb within layouts/guestbook_entries (2.0ms)
+  Rendered layouts/application.html.erb (11.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /members.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:29 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Archive" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Processing by EventsController#archive as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/archive.html.erb within layouts/events (1.0ms)
+  Rendered layouts/application.html.erb (11.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /bands.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:30 +0100
+Served asset /members.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:31 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (13.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /bands.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:32 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:33 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:33 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:33 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:33 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-10 19:00:35 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (2.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-10 19:00:38 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"avWh6HgjWPU7cs3muVJGcKbMtHAAERDtbU0D8Spwtz4=", "email"=>"asd", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'asd' LIMIT 1
+Redirected to http://127.0.0.1:3000/Events
+Completed 302 Found in 35ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/Events" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (21.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /bands.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:40 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:41 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-01-10 19:00:42 +0100
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/sessions (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-10 19:00:46 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"avWh6HgjWPU7cs3muVJGcKbMtHAAERDtbU0D8Spwtz4=", "email"=>"admin", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin' LIMIT 1
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/events (1.0ms)
+  Rendered layouts/application.html.erb (12.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /bands.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /events.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:47 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Members" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Processing by MembersController#index as HTML
+  [1m[35mMember Load (0.0ms)[0m  SELECT "members".* FROM "members" 
+  Rendered members/index.html.erb within layouts/members (2.0ms)
+  Rendered layouts/application.html.erb (12.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /events.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:50 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:51 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Users" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/users (3.0ms)
+  Rendered layouts/application.html.erb (14.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /bands.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /members.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /bands.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /static_pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:00:52 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Archive" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Processing by EventsController#archive as HTML
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/archive.html.erb within layouts/events (0.0ms)
+  Rendered layouts/application.html.erb (12.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /bands.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /bands.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /members.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/Users" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/users (1.0ms)
+  Rendered layouts/application.html.erb (40.0ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bands.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /bands.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /gallery_set.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /guestbook_entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bands.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:48 +0100
+Served asset /bands.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery_set.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /gallery_set.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/guestbook_entries.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /guestbook_entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebox.js?body=1" for 127.0.0.1 at 2013-01-10 19:01:49 +0100
+Served asset /facebox.js - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGallerySets (20121114161048)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "gallery_sets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "year" integer, "event_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161048')
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGalleryPictures (20121114161127)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "gallery_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "filename" varchar(255), "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114161127')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20121114163600)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "eventdate" date, "doors" time, "showstart" time, "entryfee" varchar(255), "description" text, "sticky" boolean, "published" boolean, "galleryset_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114163600')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBands (20121114164428)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bandinfo" text, "email" varchar(255), "telephone" varchar(255), "homepage" varchar(255), "picture" varchar(255), "notices" varchar(255), "type" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164428')
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20121114164523)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164523')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMembers (20121114164621)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164621')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGuestbookEntries (20121114164740)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121114164740')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveDatetimeFromGuestbookEntries (20130104155627)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "datetime" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "guestbook_entries"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_guestbook_entries"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130104155627')[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Migrating to RemovePostedTimeFromGuestbookEntries (20130104155700)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "posted_time" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("guestbook_entries")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "guestbook_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "town" varchar(255), "message" text, "refer_to" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_guestbook_entries")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_guestbook_entries"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_guestbook_entries"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130104155700')
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to EncryptMembers (20130106123545)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (1.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "members"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "encrypted_lastname" varchar(255), "encrypted_firstname" varchar(255), "encrypted_address_street" varchar(255), "encrypted_address_zip" varchar(255), "encrypted_address_town" varchar(255), "encrypted_telephone" varchar(255), "encrypted_email" varchar(255), "encrypted_entrydate" date, "encrypted_birthday" date, "encrypted_bankaccount_nr" varchar(255), "encrypted_bankaccount_blz" varchar(255), "encrypted_bankaccount_bankname" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_members")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_members"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_members"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130106123545')[0m
+  [1m[35m (23.0ms)[0m  commit transaction
+Migrating to RenameUserPasswordToPasswordDigest (20130110174753)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "title" varchar(255), "job" varchar(255), "usertyp" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130110174753')
+  [1m[36m (37.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bands")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("gallery_pictures")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("gallery_sets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("members")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (28.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "firstname", "job", "lastname", "password_digest", "title", "updated_at", "usertyp") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 10 Jan 2013 18:04:58 UTC +00:00], ["email", "admin"], ["firstname", "delete me"], ["job", "delete me"], ["lastname", "delete me"], ["password_digest", "$2a$10$En6utk8FALtt976hn1Bw2uJP7ZAyRQRL4X/HpSGrlvXGla4XTLog."], ["title", "Administrator"], ["updated_at", Thu, 10 Jan 2013 18:04:58 UTC +00:00], ["usertyp", ""]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGallerySets (20121114161048)
+Migrating to CreateGalleryPictures (20121114161127)
+Migrating to CreateEvents (20121114163600)
+Migrating to CreateBands (20121114164428)
+Migrating to CreateUsers (20121114164523)
+Migrating to CreateMembers (20121114164621)
+Migrating to CreateGuestbookEntries (20121114164740)
+Migrating to RemoveDatetimeFromGuestbookEntries (20130104155627)
+Migrating to RemovePostedTimeFromGuestbookEntries (20130104155700)
+Migrating to EncryptMembers (20130106123545)
+Migrating to RenameUserPasswordToPasswordDigest (20130110174753)
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bands")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("gallery_pictures")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("gallery_sets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("guestbook_entries")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("members")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
